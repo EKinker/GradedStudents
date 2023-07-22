@@ -14,11 +14,14 @@ public class StudentTest {
        // String output = student.getExamScores();
         //System.out.println(output);
         student.addExamScore(100.00);
-        System.out.println(student.getExamScores());
-        System.out.println(student.getNumberOfExamsTaken());
+//        System.out.println(student.getExamScores());
+//        System.out.println(student.getNumberOfExamsTaken());
 
         student.setExamScores(1,500);
-        System.out.println(student.getExamScores());
+//        System.out.println(student.getExamScores());
+//        System.out.println(student.getAverageExamScore());
+        System.out.println(student.toString());
+
     }
 
 }
