@@ -1,7 +1,6 @@
 package io.zipcoder;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class Classroom {
 
@@ -63,7 +62,18 @@ public class Classroom {
                 students[i] = null;
             }
         }
-
+    }
+    public void getStudentsByScore(){
+        Arrays.sort(students, Comparator.comparing(Student :: getAverageExamScore).thenComparing(Student::getFirstName).reversed());
     }
 
+    public TreeMap<Character, List<Student>> getGradeBook(){
+        Map<Character, List<Student>> map = new TreeMap<>();
+        map.put('A', new ArrayList<>());
+        map.put('B', new ArrayList<>());
+        map.put('C', new ArrayList<>());
+        map.put('D', new ArrayList<>());
+        map.put('F', new ArrayList<>());
+
+    }
 }
