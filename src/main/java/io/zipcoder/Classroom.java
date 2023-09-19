@@ -1,5 +1,6 @@
 package io.zipcoder;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Classroom {
@@ -63,7 +64,7 @@ public class Classroom {
             }
         }
     }
-    public void getStudentsByScore(){
+    public void getStudentsByScore(){  //fix this to have a return
         Arrays.sort(students, Comparator.comparing(Student :: getAverageExamScore).thenComparing(Student::getFirstName).reversed());
     }
 
@@ -75,5 +76,9 @@ public class Classroom {
         map.put('D', new ArrayList<>());
         map.put('F', new ArrayList<>());
 
+
+        //map.get('A').put(student);  //example
+
+        return (TreeMap<Character, List<Student>>) map;
     }
 }
